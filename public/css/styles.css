@@ -1,0 +1,21 @@
+
+body {
+  background-color: rgb(117, 123, 126);
+  /* text-align: center; */
+}
+
+.centered {
+    padding-top: 150px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+.footer-padding {
+  padding-bottom: 60px;
+  text-align: center;
+}
