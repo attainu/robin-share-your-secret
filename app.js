@@ -1,13 +1,14 @@
-//jshint esversion:6
+
 require("dotenv").config();
 const express = require("express");
-const bodyParser = require("body-parser");
+
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 // const passportLocalMongoose = require("passport-local-mongoose");
 const googlePassport = require("./config/googlePassport");
+const gacebookPassport = require("./config/facebookPassport");
 const User = require("./model/user");
 const authRoutes = require("./routes/auth");
 const getRoutes = require("./routes/getRoutes");
@@ -19,7 +20,7 @@ const app = express();
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(
-  bodyParser.urlencoded({
+ express.urlencoded({
     extended: true,
   })
 );
