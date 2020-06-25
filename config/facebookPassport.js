@@ -11,6 +11,7 @@ passport.use(
     profileFields: ['id', 'displayName', 'photos', 'email']
   },
   (accessToken, refreshToken, profile, cb) =>{
+    console.log(profile)
     User.findOrCreate({ facebookId: profile.id }, (err, user)=> {
       return cb(err, user);
     });
