@@ -17,7 +17,7 @@ getController.register=(req, res)=>{
   };
 
 getController.secret= (req, res)=>{
-    User.find({"secret": {$ne: null}}, function(err, foundUsers){
+    User.find({"secret": {$ne: null}}, (err, foundUsers)=>{
       if (err){
         console.log(err);
       } else {
@@ -27,6 +27,7 @@ getController.secret= (req, res)=>{
       }
     });
   };
+
 
 
 getController.submit=(req, res)=>{
