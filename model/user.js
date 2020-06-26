@@ -7,8 +7,8 @@ const userSchema = new mongoose.Schema({
   password: String,
   googleId: String,
   secret: String,
-  title:String,
-  facebookId:String
+  title: String,
+  facebookId: String,
 });
 
 userSchema.plugin(passportLocalMongoose);
