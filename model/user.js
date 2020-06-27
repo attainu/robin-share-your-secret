@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   email: String,
   password: String,
   googleId: String,
-  secret: String,
+  secret: [String],
   title: String,
   facebookId: String,
 });
@@ -14,5 +14,5 @@ const userSchema = new mongoose.Schema({
 userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(findOrCreate);
 
-const User = new mongoose.model("User", userSchema);
+const User = new mongoose.model("users", userSchema);
 module.exports = User;

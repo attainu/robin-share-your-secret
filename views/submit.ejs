@@ -2,20 +2,31 @@
 
 <div class="container">
   <div class="jumbotron centered">
-    <i class="fas fa-key fa-10Sx"></i>
+    <i class="fas fa-key fa-10x"></i>
     <h1 class="display-3">Secrets</h1>
     <p class="secret-text">Don't keep your secrets, share them anonymously!</p>
 
     <form action="/post/submit" method="POST">
-
       <div class="form-group">
-        <input type="text" class="form-control text-center" name="title" placeholder="title?">
-        <input type="text" class="form-control text-center" name="secret" placeholder="What's your secret?">
+        <input
+          type="text"
+          class="form-control text-center"
+          name="title"
+          maxlength="20"
+          placeholder="title?"
+        />
+        <input
+          type="text"
+          class="form-control text-center"
+          name="secret"
+          minlength="3"
+          maxlength="160"
+          placeholder="What's your secret?"
+          required
+        />
       </div>
       <button type="submit" class="btn btn-dark">Submit</button>
     </form>
-
-
   </div>
 </div>
 <%- include('partials/footer') %>

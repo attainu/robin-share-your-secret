@@ -40,6 +40,7 @@ postController.register = (req, res) => {
 
 postController.submit = (req, res) => {
   const submittedSecret = req.body.secret;
+  const postTitle = req.body.title;
 
   //Once the user is authenticated and their session gets saved, their user details are saved to req.user.
   // console.log(req.user.id);
@@ -50,6 +51,7 @@ postController.submit = (req, res) => {
     } else {
       if (foundUser) {
         foundUser.secret = submittedSecret;
+        foundUser.title=postTitle;
         foundUser.save(() => {
           res.redirect("/secrets");
         });
