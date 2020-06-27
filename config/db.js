@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 exports.db = mongoose
-  .connect("mongodb://localhost/secret_DB", {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/secret_DB", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: true,

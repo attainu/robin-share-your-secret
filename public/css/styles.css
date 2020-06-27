@@ -1,19 +1,17 @@
-
 body {
-  background-color: #e6e6e6
+  background-color: #e6e6e6;
   /* text-align: center; */
 }
 
 .centered {
-    padding-top: 150px;
-    text-align: center;
-} 
+  padding-top: 150px;
+  text-align: center;
+}
 .title-text {
   text-align: center;
   font-size: 2rem;
-  color:white;
-  background-color:#3d4849;
-
+  color: white;
+  background-color: #3d4849;
 }
 
 .secret-text {
@@ -25,6 +23,25 @@ body {
 
 .footer-padding {
   padding-bottom: 40px;
-  right:250px;
+  right: 250px;
   text-align: center;
+}
+
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #3d4849;
+  padding: 0.5rem;
+  border: 1px solid gold;
+  margin: 0 1rem;
+}
+.pagination a:hover,
+.pagination a:active,
+.pagination a.active {
+  background: greenyellow;
+  color: white;
 }

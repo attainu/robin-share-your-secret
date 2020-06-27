@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 const express = require("express");
 
@@ -16,11 +15,12 @@ const postRoutes = require("./routes/postRoutes");
 const db = require("./config/db");
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(
- express.urlencoded({
+  express.urlencoded({
     extended: true,
   })
 );
@@ -52,6 +52,4 @@ app.use("/auth", authRoutes);
 app.use("/", getRoutes);
 app.use("/post", postRoutes);
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000.");
-});
+app.listen(PORT, console.log("Server started on port 3000."));
