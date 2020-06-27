@@ -27,6 +27,7 @@ getController.secret = (req, res) => {
     .then((numberOfSecrets) => {
       totalSecrets = numberOfSecrets;
       return User.find({ secret: { $ne: null } })
+        .sort({ _id: -1 })
         .skip((page - 1) * ITEMS_PER_PAGE)
         .limit(ITEMS_PER_PAGE);
     })
