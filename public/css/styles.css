@@ -16,7 +16,7 @@ body {
 
 .secret-text {
   text-align: center;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #fff;
   background-color: #000;
 }
@@ -36,12 +36,16 @@ body {
   text-decoration: none;
   color: #3d4849;
   padding: 0.5rem;
-  border: 1px solid gold;
+  border: 1px solid grey;
   margin: 0 1rem;
 }
 .pagination a:hover,
 .pagination a:active,
 .pagination a.active {
-  background: greenyellow;
+  background: black;
   color: white;
+}
+
+#main {
+  height: 100vh;
 }
