@@ -7,27 +7,31 @@ const ITEMS_PER_PAGE = 7;
 getController = {};
 
 getController.home = (req, res) => {
-  res.render("home");
+  return res.render("home");
 };
 
 getController.login = (req, res) => {
-  res.render("login");
+  return res.render("login");
 };
 
 getController.register = (req, res) => {
-  res.render("register");
+  return res.render("register");
 };
 
 getController.secret = (req, res, next) => {
+  if (!req.isAuthenticated()) {
+    req.flash("error_msg", "You have to login or register first !");
+    return res.redirect("/");
+  }
   const page = +req.query.page || 1;
   let totalSecrets;
 
-  User.find({ secret: { $ne: null } })
+  User.find({ "secrets.secret": { $exists: true, $ne: null } })
     .countDocuments()
     .then((numberOfSecrets) => {
       totalSecrets = numberOfSecrets;
-      return User.find({ secret: { $ne: null } })
-        .sort({ _id: -1 })
+      return User.find({ "secrets.secret": { $exists: true, $ne: null } })
+        .sort({ "secrets.created_date": -1 })
         .skip((page - 1) * ITEMS_PER_PAGE)
         .limit(ITEMS_PER_PAGE);
     })
@@ -51,15 +55,16 @@ getController.secret = (req, res, next) => {
 
 getController.submit = (req, res) => {
   if (req.isAuthenticated()) {
-    res.render("submit");
+    return res.render("submit");
   } else {
-    res.redirect("/login");
+    return res.redirect("/login");
   }
 };
 
 getController.logout = (req, res) => {
   req.logout();
-  res.redirect("/");
+  req.flash("success_msg", "You are now successfully logged out!");
+  return res.redirect("/");
 };
 
 module.exports = getController;

@@ -1,0 +1,38 @@
+<% if(typeof errors !== 'undefined'){ %>
+<!-- Following flash will be shown if errors exist -->
+<% errors.forEach(err=>{%>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <%= err.msg%>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<%}) %> <% } %>
+<!-- Following flash will be shown to show success message -->
+<% if(success_msg.length>0){ %>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <%= success_msg %>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %>
+
+<!-- Following will be shown for error message -->
+<% if(error_msg.length>0){ %>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <%= error_msg %>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %>
+<!-- Following will be shown for error  -->
+<% if(error.length>0){ %>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <%= error %>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %>

@@ -8,6 +8,7 @@ router.get(
   "/google/secrets",
   passport.authenticate("google", { failureRedirect: "/login" }),
   (req, res) => {
+    req.flash("success_msg", "You are successfully registered!");
     res.redirect("/secrets");
   }
 );
@@ -21,6 +22,7 @@ router.get(
   "/facebook/secrets",
   passport.authenticate("facebook", { failureRedirect: "/login" }),
   (req, res) => {
+    req.flash("success_msg", "You are successfully registered!");
     res.redirect("/secrets");
   }
 );

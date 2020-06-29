@@ -6,7 +6,15 @@ const userSchema = new mongoose.Schema({
   email: String,
   password: String,
   googleId: String,
-  secret: [String],
+  secrets: {
+    secret: {
+      type: String,
+    },
+    created_date: {
+      type: Date,
+      default: Date.now,
+    },
+  },
   facebookId: String,
 });
 

@@ -12,8 +12,6 @@ router.get("/secrets", getController.secret);
 
 router.get("/submit", getController.submit);
 
-// router.get("/post", getController.secretPage);
-
 router.get("/logout", getController.logout);
 
 module.exports = router;

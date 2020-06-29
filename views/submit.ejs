@@ -1,4 +1,4 @@
-<%- include('partials/header') %>
+<%- include('partials/header') %> <%- include('partials/messages') %>
 
 <div class="container">
   <div class="jumbotron centered">
@@ -15,6 +15,7 @@
           minlength="3"
           maxlength="160"
           placeholder="What's your secret?"
+          value="<%= typeof secret != 'undefined' ? secret : '' %>"
           required
         />
       </div>
