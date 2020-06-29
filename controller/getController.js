@@ -9,6 +9,12 @@ getController = {};
 getController.home = (req, res) => {
   return res.render("home");
 };
+getController.about = (req, res) => {
+  res.render("about");
+};
+getController.contact = (req, res) => {
+  res.render("contact");
+};
 
 getController.login = (req, res) => {
   return res.render("login");
