@@ -2,7 +2,7 @@ const express = require("express");
 const User = require("../model/user");
 const passport = require("passport");
 
-const ITEMS_PER_PAGE = 5;
+const ITEMS_PER_PAGE = 7;
 
 getController = {};
 
@@ -24,7 +24,7 @@ getController.register = (req, res) => {
   res.render("register");
 };
 
-getController.secret = (req, res) => {
+getController.secret = (req, res, next) => {
   const page = +req.query.page || 1;
   let totalSecrets;
 
@@ -51,7 +51,7 @@ getController.secret = (req, res) => {
       }
     })
     .catch((err) => {
-      console.log(err);
+      next(err);
     });
 };
 
