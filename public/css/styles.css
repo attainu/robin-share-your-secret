@@ -21,6 +21,10 @@ body {
   background-color: #000;
 }
 
+.about {
+  margin-top: 1rem;
+}
+
 .footer-padding {
   padding-bottom: 40px;
   right: 250px;
@@ -47,10 +51,10 @@ body {
 }
 
 .navbar {
-  display: flex; 
+  display: flex;
   justify-content: space-around;
   overflow: hidden;
-  background-color:grey;
+  background-color: grey;
   font-family: Arial;
 }
 
@@ -64,11 +68,7 @@ body {
   text-decoration: none;
 }
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
   background-color: red;
 }
-
-
-
-
-
