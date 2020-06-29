@@ -4,6 +4,10 @@ const getController = require("../controller/getController");
 
 router.get("/", getController.home);
 
+router.get("/about", getController.about);
+
+router.get("/contact", getController.contact);
+
 router.get("/login", getController.login);
 
 router.get("/register", getController.register);

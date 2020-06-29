@@ -42,6 +42,33 @@ body {
 .pagination a:hover,
 .pagination a:active,
 .pagination a.active {
-  background: greenyellow;
+  background: darkblue;
   color: white;
 }
+
+.navbar {
+  display: flex; 
+  justify-content: space-around;
+  overflow: hidden;
+  background-color:grey;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+
+
+
+
