@@ -1,0 +1,74 @@
+body {
+  background-color: #e6e6e6;
+  /* text-align: center; */
+}
+
+.centered {
+  padding-top: 150px;
+  text-align: center;
+}
+.title-text {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  background-color: #3d4849;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+
+.about {
+  margin-top: 1rem;
+}
+
+.footer-padding {
+  padding-bottom: 40px;
+  right: 250px;
+  text-align: center;
+}
+
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #3d4849;
+  padding: 0.5rem;
+  border: 1px solid grey;
+  margin: 0 1rem;
+}
+.pagination a:hover,
+.pagination a:active,
+.pagination a.active {
+  background: darkblue;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  background-color: grey;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
